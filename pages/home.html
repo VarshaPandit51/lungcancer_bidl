@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodesign Innovation Labs</title>
+    <link rel="icon" href="img/logo.png" type="image/icon type">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="lunginfo.html">Our tool</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="login">Login</button>
+                <button class="signup">Sign up</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <video class="video-background" autoplay muted loop>
+            <source src="https://static.videezy.com/system/resources/previews/000/049/441/original/DNA4K-2.mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-content">
+            <h1>AI in Precision Medicine</h1>
+            <p>Your Path to Personalized Care and Advanced Health Solutions</p>
+        </div>
+    </section>
+    
+
+    <section class="features">
+        <h2>Our Features</h2>
+        <div class="feature-grid">
+            <div class="feature-item">CLINICAL DECISION SUPPORT</div>
+            <div class="feature-item">PATIENT PORTALS FOR EDUCATING PATIENTS</div>
+            <div class="feature-item">FAMILY HISTORY</div>
+            <div class="feature-item">BIOMARKER DATA VISUALIZATION</div>
+            <div class="feature-item">VIRTUAL CONSULTATION</div>
+           
+            <div class="feature-item">TREATMENT RECOMMENDATION</div>
+            <div class="feature-item">LIFESTYLE & FOOD HABITS</div>
+           
+        </div>
+    </section>
+
+    <section class="data-analysis">
+        <h2>Data Analysis</h2>
+        <div class="data-grid">
+           
+               
+            <div class="data-item">
+                <img src="img/clinical.png" alt="Clinical Data" style="width:150px; height:150px;">
+                <h3>Clinical Data</h3>
+                <p>Comprehensive analysis of clinical data for accurate diagnosis and treatment purposes.</p>
+            </div>
+            <div class="data-item">
+                <img src="img/TREATMENT.png" alt="Treatment & Response Data" style="width:150px; height:150px;">
+                <h3>Treatment & Response Data</h3>
+                <p>Monitor and analyze treatment response to adjust and optimize care plans.</p>
+            </div>
+            <div class="data-item">
+                <img src="img/EHR.png" alt="EHR" style="width:150px; height:150px;">
+                <h3>EHR</h3>
+                <p>Integration and analysis of electronic health records for seamless patient care.</p>
+            </div>
+            <div class="data-item">
+                <img src="img/clinical decision.png" alt="Clinical Decision Support" style="width:150px; height:150px;">
+                <h3>Clinical Decision Support</h3>
+                <p>Tools and insights for making informed clinical decisions.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="login-section" class="auth-section">
+        <h2>Login</h2>
+        <form>
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+            <a href="#forgot-password-section" class="forgot-password">Forgot Password?</a>
+        </form>
+    </section>
+
+    <section id="signup-section" class="auth-section">
+        <h2>Sign Up</h2>
+        <form>
+            <input type="text" placeholder="Name" required>
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <label for="role">I am a:</label>
+            <select id="role" name="role" onchange="showRoleSpecificFields()" required>
+                <option value="">Select...</option>
+                <option value="patient">Patient</option>
+                <option value="doctor">Doctor</option>
+                <option value="professional">Healthcare Professional</option>
+            </select>
+            <div id="roleSpecificFields"></div>
+            <button type="submit">Sign Up</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo">
+            </div>
+            <div class="links">
+                <h4>Company</h4>
+                <ul>
+                    
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#careers">Careers</a></li>
+                </ul>
+            </div>
+            <div class="support">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#help">Help center</a></li>
+                    <li><a href="#terms">Terms of service</a></li>
+                    <li><a href="#privacy">Privacy policy</a></li>
+                    <li><a href="#status">Status</a></li>
+                </ul>
+            </div>
+            <div class="newsletter">
+                <h4>Stay up to date</h4>
+                <form>
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.9/scrollreveal.min.js"></script>
+    <script>
+        ScrollReveal().reveal('.feature-item', { interval: 200 });
+        ScrollReveal().reveal('.data-item', { interval: 200 });
+
+        function showRoleSpecificFields() {
+            var role = document.getElementById("role").value;
+            var fieldsContainer = document.getElementById("roleSpecificFields");
+
+            fieldsContainer.innerHTML = "";
+
+            if (role === "patient") {
+                fieldsContainer.innerHTML = '<input type="text" placeholder="Medical History" required>';
+            } else if (role === "doctor") {
+                fieldsContainer.innerHTML = '<input type="text" placeholder="Specialization" required>';
+            } else if (role === "professional") {
+                fieldsContainer.innerHTML = '<input type="text" placeholder="Professional Field" required>';
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+

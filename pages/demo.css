@@ -1,0 +1,49 @@
+body {
+    background: #000;
+  }
+  
+  .stage {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+  }
+  
+  .actor {
+    animation: kenburns 30s linear infinite;
+    background-size: cover;
+    background-position: 50%;
+    height: 100vh;
+    inset: 0;
+    opacity: 0;
+    position: absolute;
+    scale: 1.2;
+    width: 100vw;
+  }
+  
+  .actor:nth-child(1) {
+    background-image: url("hhttps://img.freepik.com/premium-photo/image-dna-chain-science-hereditary-values-health-image-illustrate-articles-science-medicine-health-created-with-generative-ai-technology_27525-19246.jpg?ga=GA1.1.756609338.1718447142&semt=ais_hybrid");
+  }
+  .actor:nth-child(2) {
+    animation-delay: 5s;
+    background-image: url("https://img.freepik.com/free-vector/abstract-dna-background_52683-7652.jpg?ga=GA1.1.756609338.1718447142&semt=ais_hybrid");
+  }
+  .actor:nth-child(3) {
+    animation-delay: 5s;
+    background-image: url("https://img.freepik.com/free-photo/3d-render-medical-background-with-connecting-dots-dna-strands_1048-6302.jpg?ga=GA1.1.756609338.1718447142&semt=ais_hybrid");
+  }
+  
+  @keyframes kenburns {
+    25% {
+      opacity: 1;
+    }
+  
+    50% {
+      opacity: .8;
+      scale: 1;
+    }
+  
+    60% {
+      opacity: 0;
+    }
+  }

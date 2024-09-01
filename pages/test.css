@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    background:white;
+    margin: 0;
+    padding: 0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #120252;
+    color: white;
+}
+
+header .logo img {
+    width: 100px;
+}
+
+header .logo1 img {
+    width: 100px;
+}
+
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+header .auth a {
+    margin-left: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+header .auth .signup {
+    background-color: #20C997;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+header .auth .login {
+    background-color: #20C997;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.form-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+select, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+
+button {
+    background: #ff0066;
+    color: white;
+    width: 50%;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #e6005c;
+}

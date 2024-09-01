@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container1 {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.hero-section {
+    position: relative;
+    color: white;
+    font-weight: bold;
+    padding: 100px 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.stockcake.com/public/8/4/e/84ebcacc-8213-4879-b97c-c50cd9f4ad89/illuminated-dna-structure-stockcake.jpg') no-repeat center center/cover;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+.hero-section > * {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin: 0 auto;
+    width: 80%;
+}
+
+section {
+    padding: 50px 0;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.what-we-do {
+    text-align: center;
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+.what-we-do .container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.what-we-do .card {
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.what-we-do .card:hover {
+    transform: translateY(-10px);
+}
+
+.what-we-do .icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 25px;
+}
+
+.what-we-do h3 {
+    font-size: 1.5em;
+    color: #00b4d8;
+    margin-bottom: 10px;
+}
+
+.what-we-do p {
+    font-size: 1em;
+    color:black;
+}
+
+.our-projects ul {
+    list-style: none;
+    padding: 0;
+    width: 70%;
+    margin: auto;
+}
+
+.our-projects ul li {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-left: 5px solid #00b4d8;
+}
+
+.mission-vision {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.mission, .vision {
+    background: #fff;
+    padding: 20px;
+    width: 45%;
+    margin-bottom: 20px;
+    border-left: 5px solid #00b4d8;
+}
+
+.mission h2, .vision h2 {
+    text-align: center;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodesign innovation labs</title>
+    <link rel="icon" href="img/logo.png" type="image/icon type">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="family.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="lunginfo.html">Our tool</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="login">Login</button>
+                <button class="signup">Sign up</button>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>
+</header>
+    <main>
+        <div class="container1">
+            <!-- Family History Form -->
+            <div class="form-container" id="family-history-form">
+                <form id="family-history">
+                    <h2>Family History</h2>
+                    <label for="familyHistory">Family History of Lung Cancer:</label>
+                    <select id="familyHistory" name="familyHistory" required>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                    
+                    <label for="smokingInFamily">Family History of Smoking:</label>
+                    <select id="smokingInFamily" name="smokingInFamily" required>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                    
+                    <label for="ageOfOnset">Age of Onset in Family Members:</label>
+                    <input type="number" id="ageOfOnset" name="ageOfOnset" required>
+                    
+                    
+                    
+                    <button type="button" class="next-btn" onclick="goToNextForm('lifestyle-form')">Next</button>
+                </form>
+            </div>
+
+            <!-- Lifestyle Form -->
+            <div class="form-container" id="lifestyle-form" style="display:none;">
+                <form id="lifestyle" action="test.html">
+                    <h2>Lifestyle</h2>
+                    <label for="cigarettesPerDay">Cigarettes per Day:</label>
+                    <input type="number" id="cigarettesPerDay" name="cigarettesPerDay" required>
+                    
+                    <label for="yearsSmoked">Years Smoked:</label>
+                    <input type="number" id="yearsSmoked" name="yearsSmoked" required>
+                    
+                    <label for="packYears">Smoking History (Pack-Years):</label>
+                    <input type="number" id="packYears" name="packYears" readonly required>
+
+                    
+                    <label for="personalMedicalHistory">Personal Medical History:</label>
+                    <input type="text" id="personalMedicalHistory" name="personalMedicalHistory" required>
+                    
+                    
+                    <label for="generalLifestyleFactors">General Lifestyle Factors:</label>
+                    <input type="text" id="generalLifestyleFactors" name="generalLifestyleFactors" required>
+                    
+                    <button type="submit" class="next-btn">Next</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script>
+        function goToNextForm(nextFormId) {
+            document.querySelectorAll('.form-container').forEach(form => {
+                form.style.display = 'none';
+            });
+            document.getElementById(nextFormId).style.display = 'block';
+        }
+
+        // Calculate Pack-Years
+        document.getElementById('cigarettesPerDay').addEventListener('input', calculatePackYears);
+        document.getElementById('yearsSmoked').addEventListener('input', calculatePackYears);
+
+        function calculatePackYears() {
+            const cigarettesPerDay = document.getElementById('cigarettesPerDay').value;
+            const yearsSmoked = document.getElementById('yearsSmoked').value;
+            const packYears = (cigarettesPerDay / 20) * yearsSmoked;
+            document.getElementById('packYears').value = packYears.toFixed(2);
+        }
+    </script>
+
+   
+</body>
+</html>
